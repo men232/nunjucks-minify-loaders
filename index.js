@@ -1,0 +1,1 @@
+module.exports.FileMinifyLoader = require('./FileMinifyLoader');

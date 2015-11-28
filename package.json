@@ -1,0 +1,22 @@
+{
+  "name": "nunjucks-minify-loaders",
+  "version": "1.0.0",
+  "description": "Passing source from loader via html-minifier",
+  "main": "index.js",
+  "keywords": [
+    "nunjucks",
+    "html",
+    "minifier",
+    "loaders"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/men232/nunjucks-minify-loaders.git"
+  },
+  "dependencies": {
+    "html-minifier": "^1.0.0",
+    "nunjucks": "^2.1.0"
+  },
+  "author": "Andrew Mensky",
+  "license": "BSD-2-Clause"
+}
