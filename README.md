@@ -7,14 +7,14 @@ Simple module to passing source from loader via HTML minifier.
 # Using
 ```js
 var nunjucks = require('nunjucks');
-var FileMinifyLoader = require('nunjucks-minify-loaders').FileMinifyLoader
-
+var FileMinifyLoader = require('nunjucks-minify-loaders').FileMinifyLoader;
+ 
 var opts = {
-    // FileSystemLoader
-    watch: true
-    noCache: false
+    // FileSystemLoader 
+    watch: true,
+    noCache: false,
 
-    // html-minifier
+    // html-minifier 
     minify: {
         removeComments: true,
         minifyJS: true,
