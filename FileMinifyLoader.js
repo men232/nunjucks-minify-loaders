@@ -23,8 +23,10 @@ var FileMinifyLoader = FileSystemLoader.extend({
 
 	getSource: function(name) {
 		var result = FileSystemLoader.prototype.getSource.call(this, name);
-		result.src = minify(result.src, this.minifyOpts);
 
+		if (!result) return null;
+
+		result.src = minify(result.src, this.minifyOpts);
 		return result;
 	}
 });
