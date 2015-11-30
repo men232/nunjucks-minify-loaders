@@ -7,7 +7,7 @@ var defaultMinifyOpts = {
 	collapseWhitespace: true,
 	minifyJS: true,
 	minifyCSS: true,
-	ignoreCustomFragments: [/{%.*?%}/, /{{.*?}}/]
+	ignoreCustomFragments: [/\{\%[^}]+\%\}/]
 };
 
 var FileMinifyLoader = FileSystemLoader.extend({

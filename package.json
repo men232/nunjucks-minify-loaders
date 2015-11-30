@@ -1,6 +1,6 @@
 {
   "name": "nunjucks-minify-loaders",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Passing source from loader via html-minifier",
   "main": "index.js",
   "keywords": [
