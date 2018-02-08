@@ -17,7 +17,7 @@
     "url": "git://github.com/men232/nunjucks-minify-loaders.git"
   },
   "dependencies": {
-    "html-minifier": "^2.1.7",
+    "html-minifier": "^3.5.8",
     "nunjucks": "^3.0.1"
   },
   "author": "Andrew Mensky",
