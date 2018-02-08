@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "Passing source from loader via html-minifier",
   "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/_mocha"
+  },
   "keywords": [
     "nunjucks",
     "html",
@@ -18,5 +21,8 @@
     "nunjucks": "^2.4.2"
   },
   "author": "Andrew Mensky",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "mocha": "^5.0.0"
+  }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
+        {% for stylesheet in stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ stylesheet }}">
+        {% endfor %}
+        {% for javascript in javascripts %}
+             <script type="text/javascript" src="{{ javascript }}"></script>
+        {% endfor %}
+        <style type="text/css">
+            body {
+              color:red;
+            }
+        </style>
+    </head>
+    <!--This is a comment-->
+    <script type="text/javascript">
+        var toto = "";
+        console.log(toto);
+    </script>
+    <body
+        {% if bodyClass %}
+            class="{{ bodyClass }}"
+        {% endif %}
+    >
+        {% block body %}
+            sample body
+        {% endblock %}
+    </body>
+</html>
