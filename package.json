@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "html-minifier": "^2.1.7",
-    "nunjucks": "^2.4.2"
+    "nunjucks": "^3.0.1"
   },
   "author": "Andrew Mensky",
   "license": "BSD-2-Clause",
