@@ -12,7 +12,12 @@ var defaultMinifyOpts = {
 
 var FileMinifyLoader = FileSystemLoader.extend({
 	init: function(searchPaths, opts) {
-		this.minifyOpts = opts.minify || defaultMinifyOpts;
+		if(opts && opts.minify) {
+			this.minifyOpts = opts.minify;
+		}
+		else {
+			this.minifyOpts = defaultMinifyOpts;
+		}
 
 		if (!this.minifyOpts.ignoreCustomFragments) {
 			this.minifyOpts.ignoreCustomFragments = defaultMinifyOpts.ignoreCustomFragments;
