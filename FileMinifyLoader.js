@@ -10,30 +10,28 @@ var defaultMinifyOpts = {
 	ignoreCustomFragments: [/\{\%[^}]+\%\}/]
 };
 
-var FileMinifyLoader = FileSystemLoader.extend({
-	init: function(searchPaths, opts) {
-		if(opts && opts.minify) {
+class FileMinifyLoader extends FileSystemLoader {
+	constructor(searchPaths, opts) {
+		super(searchPaths, opts);
+		if (opts && opts.minify) {
 			this.minifyOpts = opts.minify;
-		}
-		else {
+		} else {
 			this.minifyOpts = defaultMinifyOpts;
 		}
 
 		if (!this.minifyOpts.ignoreCustomFragments) {
 			this.minifyOpts.ignoreCustomFragments = defaultMinifyOpts.ignoreCustomFragments;
 		}
+	}
 
-		FileSystemLoader.prototype.init.call(this, searchPaths, opts);
-	},
-
-	getSource: function(name) {
-		var result = FileSystemLoader.prototype.getSource.call(this, name);
+	getSource(name) {
+		var result = super.getSource(name);
 
 		if (!result) return null;
 
 		result.src = minify(result.src, this.minifyOpts);
 		return result;
 	}
-});
+}
 
 module.exports = FileMinifyLoader;
