@@ -16,16 +16,16 @@
             }
         </style>
     </head>
-    <!--This is a comment-->
-    <script type="text/javascript">
-        var toto = "";
-        console.log(toto);
-    </script>
     <body
         {% if bodyClass %}
             class="{{ bodyClass }}"
         {% endif %}
     >
+        <!--This is a comment-->
+        <script type="text/javascript">
+            var toto = "";
+            console.log(toto);
+        </script>
         {% block body %}
             sample body
         {% endblock %}
